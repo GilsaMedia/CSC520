@@ -1,22 +1,8 @@
-## =============================
-## main.py
-## authors:
-##           Chen Zhang
-##           Deepika Vinodkumar
-##           Deesha Shingadia
-##           Tejaswini Koduru
-##           Megha Dhoke
-##           Chunhua Yang
-##           Kalyan Kumar Yalagandula
-## date: Nov. 1st 2015
-## version: 1
-## class: Python Fall 2015, Dr. Riehle
-
-
 from tkinter import *
 from tkinter import messagebox
 import random
 import constants
+
 try:
     import winsound
 
@@ -41,7 +27,7 @@ class Game:
         self.shown = []
         self.click = 0
         self.numberLeft = 8
-        self.sec = 30
+        self.sec = 45
         self.done = False
         self.back = PhotoImage(data=constants.back)
         self.blank = PhotoImage(data=constants.blank)
