@@ -1,18 +1,3 @@
-## =============================
-## main.py
-## authors:
-##           Chen Zhang
-##           Deepika Vinodkumar
-##           Deesha Shingadia
-##           Tejaswini Koduru
-##           Megha Dhoke
-##           Chunhua Yang
-##           Kalyan Kumar Yalagandula
-## date: Nov. 1st 2015
-## version: 1
-## class: Python Fall 2015, Dr. Riehle
-
-
 from tkinter import *
 from tkinter import messagebox
 import random
@@ -41,7 +26,7 @@ class Game:
         self.shown = []
         self.click = 0
         self.numberLeft = 8
-        self.sec = 30
+        self.sec = 45
         self.done = False
         self.back = PhotoImage(data=constants.back)
         self.blank = PhotoImage(data=constants.blank)
@@ -74,16 +59,16 @@ class Game:
         print(card)
         if card.show:
             return
-        
+
         if len(self.shown) == 0:
             self.shown.append(card)
             pic = PhotoImage(file='./imgs/' + card.file + '.gif')
             card.configure(image=pic)
             card.pic = pic
             card.show = True
-            
+
         elif len(self.shown) == 1:
-        
+
             if self.shown[0].file == card.file:
                 self.numberLeft -= 1
 
@@ -126,7 +111,7 @@ class Game:
                 card.pic = pic
                 card.show = True
                 card.after(300, handle)
-                
+
             elif card.file == self.shown[1].file:
                 self.numberLeft -= 1
 
@@ -153,7 +138,7 @@ class Game:
                 card.configure(image=pic)
                 card.pic = pic
                 card.show = True
-                
+
         self.isDone()
 
     def isDone(self):
